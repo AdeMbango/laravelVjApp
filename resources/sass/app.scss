@@ -9,9 +9,9 @@ $fa-font-path: "../webfonts";
 @import '~bootstrap/scss/bootstrap';
 @import '~admin-lte/dist/css/adminlte.css';
 
-@import "~/@fortawesome/fontawesome/scss/fontawesome.scss";
-@import "~/@fortawesome/fontawesome/scss/solid.scss";
-@import "~/@fortawesome/fontawesome/scss/brands.scss";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
 
 .navbar-laravel {
   background-color: #fff;
