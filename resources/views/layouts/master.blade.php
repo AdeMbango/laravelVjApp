@@ -13,13 +13,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>LaraVjApp</title>
 
   <!-- Font Awesome Icons -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="/css/app.css">
   <!-- Theme style -->
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+
+<div class="wrapper" id="app">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
@@ -81,13 +83,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 
            <li class="nav-item has-treeview menu-open">
-             <a href="#" class="nav-link">
+             <router-link to="/dashboard" class="nav-link">
                <i class="nav-icon fas fa-tachometer-alt"></i>
                <p>
                  Dashboard
 
                </p>
-             </a>
+             </router-link>
            </li>
 
           <li class="nav-item has-treeview">
@@ -115,13 +117,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
 
          <li class="nav-item">
-           <a href="#" class="nav-link">
+           <router-link to="/profile" class="nav-link">
              <i class="nav-icon fas fa-user"></i>
              <p>
                Perfil
 
              </p>
-           </a>
+           </router-link>
 
          </li>
 
@@ -156,7 +158,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    <div class="content">
+      <div class="content-fluid">
+          <router-view></router-view>
 
+      </div>
+
+    </div>
   </div>
   <!-- /.content-wrapper -->
 
@@ -182,6 +190,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 <!-- ./wrapper -->
 
-<script src="js/app.js"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
